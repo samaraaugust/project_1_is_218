@@ -20,6 +20,7 @@
     <div class="row">
         <header class="mb-5">
             <!-- As a link -->
+            <!---
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container">
                     <a class="navbar-brand" href="/">My Site</a>
@@ -33,14 +34,15 @@
                                 <a class="nav-link active" aria-current="page" href="{{ url_for('simple_pages.show', page="index")}}">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url_for('simple_pages.show', page="about")}}">About</a>
+                                <a class="nav-link" href="{{ url_for('simple_pages.show', page="about")}}">Git</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url_for('simple_pages.show', page="page1")}}">Page 1</a>
+                                <a class="nav-link" href="{{ url_for('simple_pages.show', page="page1")}}">Docker</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url_for('simple_pages.show', page="page2")}}">Page 2</a>
+                                <a class="nav-link" href="{{ url_for('simple_pages.show', page="page2")}}">Python/Flask</a>
                             </li>
+
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url_for('simple_pages.show', page="page3")}}">Page 3</a>
                             </li>
@@ -50,6 +52,19 @@
                         </ul>
                     </div>
                 </div>
+            </nav> -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                      <a class="nav-item nav-link active" href="#">Home</a>
+                      <a class="nav-item nav-link" href="#">Git</a>
+                      <a class="nav-item nav-link" href="#">Docker</a>
+                      <a class="nav-item nav-link" href="#">Python/Flask</a>
+                    </div>
+                  </div>
             </nav>
         </header>
     </div>
