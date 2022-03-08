@@ -1,4 +1,94 @@
 {% extends "base.html" %}
 {% block content %}
-    Page 2
+    <div class="container-fluid content">
+        <div class="header">
+            <h1>Docker</h1>
+        </div>
+        <div class="info">
+            <div class="row">
+                <h2>Docker Container:</h2>
+                <p>
+                    A container is a software that packages
+                    code and its dependencies into one unit. Specifically,
+                    a Docker container is an executable package of software
+                    that consists of a program's code, runtime, system tools, dependencies,
+                    system libraries, settings, etc.
+                </p>
+            </div>
+            <div class="row">
+                <h2>Docker Image:</h2>
+                <p>
+                    A Docker image is a file that is used as a
+                    set of instructions
+                    that build/execute a Docker container.
+                </p>
+            </div>
+            <div class="row">
+                <h2>Docker Commands:</h2>
+                <ul>
+                    <li>The docker commands that I’ve used before are “docker --version”,
+                        which shows the version of
+                        Docker that is currently installed on your machine.</li>
+                    <li>
+                        Another docker command that I’ve used before is “docker run
+                        -itp port-number image-name”, which is a command
+                        used to create a container for an image on a specific port on your machine.
+                    </li>
+                    <li>
+                        The docker command “docker ps” is
+                        used to list the containers that are currently running on your machine.
+                    </li>
+                    <li>
+                        The docker command “docker kill container-id” is
+                        to stop the execution of a currently running container.
+                    </li>
+                    <li>
+                        Another docker command that I used was “docker rm container-id”,
+                        which is used to delete a container that stopped from docker.
+                    </li>
+                    <li>
+                        I also used “docker login” to login into my docker account.
+                    </li>
+                    <li>
+                        I also used “docker push” to push an image to its docker hub repository.
+                    </li>
+                    <li>
+                        Another docker command that I used was “docker images”, which is a
+                        command that is used to list all of the images that are stored locally.
+                    </li>
+                    <li>
+                        Another docker command that I used was “docker commit”, which is used to
+                        create a new image for all of the recent changes made to a container.
+                    </li>
+                    <li>
+                        Another docker command that I used is “docker compose up –build”, which builds and starts running a container.
+                    </li>
+                </ul>
+            </div>
+            <div class="row">
+                <h2>How to Start Docker Project/Project Repository on Docker Hub:</h2>
+                <p>
+                    In order to start a project, you would first
+                    need to create a repository on Docker hub. Afterwards, on the IDE you have chosen to work with you would need
+                    to create a directory for your project. Then you would need to create a Dockerfile which would help to build your Docker image, the image will contain the
+                    dependencies that the Python application needs to build. Then create a docker-compose.yml, which includes the version of Docker,
+                    the services that will be used, the port number, etc. Afterwards, you can add your html files and then use the command
+                    “docker compose up - -build”
+                    to build your image and to view it
+                    on your localhost. Then you can push your
+                    image to your docker repository by using
+                    the command “docker push hub-user/repo-name:tag”.
+                </p>
+            </div>
+            <div class="row">
+                <h2>Access Docker Container From Terminal:</h2>
+                <p>In order to access a Docker container from the terminal
+                you would have to find the container id by running the following
+                    command "docker ps". After you have found the container id for
+                    the container you want to use, you can use the command "docker
+                    exec -t container-id" to access the container.
+                </p>
+            </div>
+        </div>
+    </div>
 {% endblock %}
