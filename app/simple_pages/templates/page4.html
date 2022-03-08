@@ -4,5 +4,30 @@
         <div class="header">
             <h1>Continuous Integration and Deployment</h1>
         </div>
+    <div class="info">
+            <div class="row">
+                <h2>How to Use Github Actions and Workflows for CI/CD:</h2>
+                <p>Continuous integration and deployment allows developers to make changes to
+                    a separate  version/branch of their project without directly working with
+                    the production or main version of their application. This assists developers
+                    because if a person were to have an error in their code, they can first deploy
+                    their program, see their error and after they fix it they can merge their edited
+                    code with the production code. This allows for the production version of their
+                    application to always be in working condition. In github actions, for this project,
+                    I have two workflows, which is for Development and Production. The Development
+                    workflow is executed when there is a pull_request on to the branch master from
+                    the development branch (dev). When the workflow is activated it triggers a pytest
+                    to be run and it also deploys the web application to heroku. The workflows allow
+                    for me to review the changes that were made to the development branch before
+                    I merge them with the production branch. The Production workflow is executed
+                    when changes are pushed to the production branch (master). When the workflow
+                    is activated it runs pytest on the code, it also builds the docker image and
+                    pushes it to my docker hub repository, and it deploys the web application on
+                    heroku. The docker image is able to be pushed to my docker repository because
+                    in the workflow it allows me to login to docker hub using my username and password
+                    and once I provide the name of the repository
+                    I am able to write a command for the image to be built and pushed to docker hub.</p>
+            </div>
+    </div>
     </div>
 {% endblock %}

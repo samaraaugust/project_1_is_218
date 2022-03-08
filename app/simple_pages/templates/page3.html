@@ -4,5 +4,134 @@
         <div class="header">
             <h1>Python/Flask</h1>
         </div>
+        <div class="info">
+            <div class="row">
+                <h2>Description of Pytest/Examples:</h2>
+                <p>
+                    Pytest allows developers to create and run tests on their program in order to ensure
+                    that the output that the software is outputting is expected/wanted.
+                    By running pytest on their software in between making changes it allows developers to distinguish if
+                    the previous changes that were ge ade unknowingly created an error in their program.
+                    For example, in my current program, I am creating a web application that involves
+                    creating several web pages. I have used pytest to ensure that the content
+                    that is being displayed on the pages are expected and whether the proper
+                    context processors messages are being displayed properly. In order to use pytest,
+                    you would first have to install the package on your computer. Afterwards,
+                    you would create a directory/folder called tests to store your test files.
+                </p>
+            </div>
+            <div class="row">
+                <h2>How to Create/Test simple_pages:</h2>
+                <p>In order to create the web pages, I initially created a
+                    “base.html” file to create a template that the rest
+                    of my web pages will build off of. The file will have the navbar,
+                    link to css file, script to link to bootstrap, footer, etc. I created a
+                    directory in my app directory called “simple_pages”. This directory contains
+                    the templates for the html web pages. I tested these pages using the assert
+                    function to make sure that the content that is on the pages are correct.</p>
+            </div>
+            <div class="row">
+                <h2>Outline:</h2>
+                <ul>
+                    <li>
+                        docker_flask <- Root directory
+                    </li>
+                    <li>
+                        .github and workflows <- Directory that has workflow files
+                    </li>
+                    <li>
+                        app <- directory that contains files for web pages
+                        <ul>
+                            <li>
+                                context_processors <- directory that contains files to define the context processors
+                            </li>
+                            <ul>
+                                <li>
+                                    __init__.py <- file where context processors are defined
+                                </li>
+                            </ul>
+                        </ul>
+                        <li>
+                            simple_pages <- directory that contains the html files that will be displayed
+                        </li>
+                        <ul>
+                            <li>
+                                templates <- directory where html files are
+                            </li>
+                            <li>
+                                __init__.py <- file where page routes are defined and pages are organized according to the templates
+                            </li>
+                        </ul>
+                        <li>
+                            static <- directory where css files, images, and javascript files are
+                        </li>
+                        <li>
+                            Templates <- directory where base.html file is defined
+                        </li>
+                        <ul>
+                            <li>
+                                base.html <- html file that contains that basis for the other html files in the project, it includes the navigation bar, link to css file, link to bootstrap, etc.
+                            </li>
+                        </ul>
+                        <li>
+                            __init__.py <- file creates and configures the flask application and it registers the simple_pages as a blueprint and the context_processors so that they can be used throughout the application
+                        </li>
+                        <li>
+                            run.py <- file which allows Gunicorn to put the app into production
+                        </li>
+                    </li>
+                    <li>
+                        tests <- directory where test files are held where pytest can find them
+                    </li>
+                    <ul>
+                        <li>
+                            __init__.py <- although file is empty, file is there to allow application to run smoothly without error
+                        </li>
+                        <li>
+                            conftest.py <-  file that setups the test configuration such as creating the app, making an http client, and creating a task runner
+                        </li>
+                        <li>
+                            context_process_text.py <- file that tests that the context processors are properly displayed on the files
+                        </li>
+                        <li>
+                            simple_pages_test.py <- file that tests that the proper responses are coming from the web pages, to ensure that the routes are correct
+                        </li>
+                    </ul>
+                    <li>
+                        .coveragerc <- file that is used to assist in configuring application
+                    </li>
+                    <li>
+                        .dockerignore <- file that tells docker which files not to push to docker hub
+                    </li>
+                    <li>
+                        .gitignore <- file that excludes specific files from being pushed to github
+                    </li>
+                    <li>
+                        .pylintrc <- file that is used to assist in configuring application
+                    </li>
+                    <li>
+                        docker-compose.yml <- file that contains the services and configuration that the application needs to develop locally
+                    </li>
+                    <li>
+                        Dockerfile <- file used to build/create your Docker image, the image will contain the dependencies that the Python application needs to build
+                    </li>
+                    <li>
+                        heroku.yml <- file used to define heroku app  and allow application to be deployed on heroku
+                    </li>
+                    <li>
+                        pytest.ini <- file that contains configuration for pytest
+                    </li>
+                    <li>
+                        Readme.md <- file that contains project instructions
+                    </li>
+                    <li>
+                        requirements.txt <- file that contains packages that need to be installed for this application
+                    </li>
+                    <li>
+                        setup.py <- file that find and installs the packages that are needed for the application
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 {% endblock %}
