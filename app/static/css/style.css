@@ -1,3 +1,17 @@
-body {
-font-size: 200%;
+.header {
+    color: blue;
+    text-align: center;
+    background: bisque;
+    padding: 10px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-content: space-evenly;
 }
