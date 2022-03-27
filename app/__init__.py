@@ -3,6 +3,8 @@ from flask import Flask, render_template
 from app.context_processors import utility_text_processors
 from app.simple_pages import simple_pages
 
+def page_not_found(e):
+    return render_template("404.html"), 404
 
 def create_app():
     """Create and configure an instance of the Flask application."""
