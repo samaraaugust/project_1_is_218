@@ -1,6 +1,7 @@
 import datetime
 from os import getenv
 '''
+#Not Used
 def test_context_variables_environment(client):
     """This test checks if the environment is printed"""
     response = client.get("/")
@@ -21,6 +22,7 @@ def test_context_variables_year(client):
     assert response.status_code == 200
     assert content in response.data
 '''
+#Not used
 def test_context_currency_format(client):
     """This tests checks if the copyright and current year are printed"""
     response = client.get("/")
