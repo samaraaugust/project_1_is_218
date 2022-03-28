@@ -4,5 +4,138 @@
         <div class="header">
             <h1>Object Oriented Programming</h1>
         </div>
+        <div class="def">
+            <h3>
+                Encapsulation
+            </h3>
+            <p>
+                In OOP, encapsulation is commonly used in the form of a class. Overall, it is the concept of bundling data
+                and methods within a single unit. It allows for specific or internal information to be hidden and
+                for the access to that information to be controlled. By using encapsulation users of classes don't know how the classes are
+                implemented or how the information is stored however they can access the logic of the classes through instantiation and class methods.
+                <br/>
+                <br>
+                An example of encapsulation based on our calculator program would be:
+                <br/>
+                <br/>
+                class Calculations:
+                <br/>
+                &nbsp; history = []
+                <br/>
+                &nbsp; @staticmethod
+                <br/>
+                &nbsp; def clear_history():
+                <br/>
+                &nbsp; &nbsp; Calculations.history.clear()
+                <br/>
+                &nbsp; &nbsp; return True
+                <br/>
+                ...
+            </p>
+            <p>
+                This is an example of encapsulation because the program creates a class called Calculations and it defines class properties such as history
+                which is an array and it also defines class methods such as clear_history which can be used by users once they create an instance of the class.
+            </p>
+        </div>
+        <div class="def">
+            <h3>
+                Inheritance
+            </h3>
+            <p>
+               Inheritance in object oriented programming allows for programmers to derive a class from another class which creates a hierarchy
+                of classes. This allows for classes to share attributes and methods. Since a class can be derived from another class, the class
+                that the class is being derived from is called a superclass or a parent class. While the derived class is called a subclass or child class.
+            </p>
+            <p>
+                An example of inheritance can be shown in the calculator program:
+                <br/>
+                <br/>
+                class Calculation:
+                <br/>
+                &nbsp; @classmethod
+                <br/>
+                &nbsp; def create(cls, tuple_list: tuple):
+                <br/>
+                &nbsp; &nbsp; return cls(tuple_list)
+                <br/>
+                <br/>
+                class Addition(Calculation):
+                <br/>
+                &nbsp; def get_result(self):
+                <br/>
+                &nbsp; &nbsp; sum_of_values = 0.0
+                <br/>
+                &nbsp; &nbsp; for value in self.values:
+                <br/>
+                &nbsp; &nbsp; &nbsp; sum_of_values = Add.add(value, sum_of_values)
+                <br/>
+                &nbsp; &nbsp; return sum_of_values
+            </p>
+            <p>
+                The Calculation class is a parent class and the Addition class is a child class. The Addition class uses the Calculation class as a parameter which
+                causes for the Addition class to because a child of the Calculation class which allows for methods and properties to be shared amongst the classes.
+            </p>
+        </div>
+        <div class="def">
+            <h3>
+                Polymorphism
+            </h3>
+            <p>
+                Polymorphism is the concept which allows for variables, functions, or objects to have multiple different forms.
+            </p>
+            <p>
+                An example of polymorphism can be shown through the calculator program:
+                <br/>
+                <br/>
+                class Calculation:
+                <br/>
+                &nbsp; @classmethod
+                <br/>
+                &nbsp; def create(cls, tuple_list: tuple):
+                <br/>
+                &nbsp; &nbsp; return cls(tuple_list)
+                <br/>
+                <br/>
+                class Addition(Calculation):
+                <br/>
+                &nbsp; def get_result(self):
+                <br/>
+                &nbsp; &nbsp; sum_of_values = 0.0
+                <br/>
+                &nbsp; &nbsp; for value in self.values:
+                <br/>
+                &nbsp; &nbsp; &nbsp; sum_of_values = Add.add(value, sum_of_values)
+                <br/>
+                &nbsp; &nbsp; return sum_of_values
+                <br/>
+                <br/>
+                class Multiplication(Calculation):
+                <br/>
+                &nbsp;def get_result(self):
+                <br/>
+                &nbsp; &nbsp; result = 1.0
+                <br/>
+                &nbsp; &nbsp; for value in self.values:
+                <br/>
+                &nbsp; &nbsp; &nbsp;result = Mult.multiply(result, value)
+                <br/>
+                &nbsp; &nbsp; return result
+            </p>
+            <p>
+                This is an example of polymorphism because the class Calculation is the parent class for both the Addition and
+                Multiplication classes. The Multiplication and Addition classes defines the same method get_result(self), however,
+                the methods are altered according to the purpose of the classes despite having the same name.
+            </p>
+        </div>
+        <div class="def">
+            <h3>
+                Abstraction
+            </h3>
+            <p>
+                Abstraction in OOP is a concept that allows for only essential attributes to be shown and it hides the unnecessary information from users.
+                Its assists with handling or reducing the complexity of programs, which helps users to implement more complex logic alongside the abstraction without having to
+                deal with the complexity of the program. So it mainly shows the user how to implement the program but not the complexity of its implementation.
+            </p>
+        </div>
     </div>
 {% endblock %}
