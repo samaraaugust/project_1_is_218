@@ -4,5 +4,367 @@
         <div class="header">
             <h1>Definitions</h1>
         </div>
+        <div class="listItems">
+            <ul>
+                <li>
+                    <h3>Instantiation</h3>
+                    <p>
+                        In Computer Science, instantiation is the act of create a real instance of a class object.
+                    </p>
+                    <p>
+                        For example, in Java, if there is a class called Shape:
+                        <br/>
+                        public class Shape {...}
+                        <br/>
+                        You can create an instance of the class by writing the following code:
+                        <br/>
+                        Shape rectangle = new Shape();
+                    </p>
+                </li>
+                <li>
+                    <h3>Object</h3>
+                    <p>
+                        Definition: An object is an instance of a class. It can also be defined as an abstract data type.
+                    </p>
+                    <p>
+                        For example, based on our previous example instantiation, the following code creates/defines an object from the Shape class:
+                        <br/>
+                        <br/>
+                        Shape rectangle = new Shape();
+                    </p>
+                </li>
+                <li>
+                    <h3>Class</h3>
+                    <p>
+                        Definition: A class is commonly used in object oriented programming and it is a template that defines methods and variables for a specific object.
+                    </p>
+                    <p>
+                        For example, in Java, a class called Shape can be created using the following code:
+                        <br/>
+                        <br/>
+                        public class Shape {
+                            <br/>
+                            int num_sides;
+                            <br/>
+                            String name;
+                            <br/>
+                            ...
+                            <br/>
+                            public int get_sides() {
+                            <br/>
+                                return num_sides
+                            <br/>
+                            }
+                            <br/>
+                            ...
+                            <br/>
+                        }
+                    </p>
+                </li>
+                <li>
+                    <h3>Namespace</h3>
+                    <p>
+                        Definition: In programming, a namespace is a region of code that can declared which creates a scope for names. In other words, it allows for
+                        users to define functions that have the same names as other functions.
+                    </p>
+                    <p>
+                        For example, in c++ namespaces can be used to accomplish the following:
+                        <br/>
+                        <br/>
+                        namespace other_one {
+                        <br/>
+                        int value = 1;
+                        <br/>
+                        }
+                        <br/>
+                        int main() {
+                        <br/>
+                        int value = 2;
+                        <br/>
+                        ...
+                        <br/>
+                        }
+                    </p>
+                </li>
+                <li>
+                    <h3>Constructor</h3>
+                    <p>
+                        Definition: A constructor is a specific method of a class that is used to initialize a newly created object.
+                    </p>
+                    <p>
+                        For example, a constructor for the Shape class that we defined in the previous definitions would be:
+                        <br/>
+                        <br/>
+                        public class Shape {
+                            <br/>
+                            int num_sides;
+                            <br/>
+                            String name;
+                            <br/>
+                            public Shape(String name, int num_sides) {
+                            <br/>
+                            this.name = name;
+                            <br/>
+                            this.num_sides = num_sides;
+                            <br/>
+                            }
+                            <br/>
+                            public int get_sides() {
+                            <br/>
+                                return num_sides
+                            <br/>
+                            }
+                            <br/>
+                            ...
+                            <br/>
+                        }
+                    </p>
+                </li>
+                <li>
+                    <h3>Fixture</h3>
+                    <p>
+                        In programming, a fixture is a function that can be used to define a set of steps and data that can be used for testing.
+                        It also helps by providing the database with data, database connections, etc.
+                    </p>
+                    <p>
+                        An example of an fixture can be shown through the calculator program:
+                        <br/>
+                        <br/>
+                        @pytest.fixture
+                        <br/>
+                        def setup_addition_calculation_fixture():
+                        <br/>
+                        &nbsp;values = (1, 2)
+                        <br/>
+                        &nbsp;addition = Addition(values)
+                        <br/>
+                        &nbsp;History.add_calculation(addition)
+                    </p>
+                </li>
+                <li>
+                    <h3>Type Hint</h3>
+                    <p>
+                        Type Hint is used in Python to statically check the data type or type of value that is used within your program.
+                    </p>
+                    <p>
+                        An example of type hinting can be shown using the calculator program:
+                        <br/>
+                        <br/>
+                        @classmethod
+                        <br/>
+                        def create(cls, tuple_list: tuple):
+                        <br/>
+                        &nbsp; return cls(tuple_list)
+                    </p>
+                    <p>
+                        The example uses type hinting because of the following line of code "def create(cls, tuple_list: tuple):". By
+                        writing "tuple_list: tuple", it ensures that the parameter "tuple_list" has a data type of tuple.
+                    </p>
+                </li>
+                <li>
+                    <h3>Type Cast</h3>
+                    <p>
+                        A type cast is when the data type of a variable is changed to another data type.
+                    </p>
+                    <p>
+                        An example of type casting can be shown using the calculator program:
+                        <br/>
+                        <br/>
+                        @staticmethod
+                        <br/>
+                        def convert_args_to_tuple_of_float(tuple_list):
+                        <br/>
+                        &nbsp; &nbsp;list_values_float = []
+                        <br/>
+                        &nbsp; &nbsp;for item in tuple_list:
+                        <br/>
+                        &nbsp; &nbsp; &nbsp;list_values_float.append(float(item))
+                        <br/>
+                        &nbsp; &nbsp;return tuple(list_values_float)
+                    </p>
+                    <p>
+                        The example uses type casting because in the line of code "list_values_float.append(float(item))"
+                        it converts the data type of "item" into a float. Therefore, it is converting every value in tuple_list to a float.
+                    </p>
+                </li>
+                <li>
+                    <h3>Unit Test</h3>
+                    <p>
+                        A unit test is the process of testing a unit or logically isolated piece of code or system in a program. The unit can be
+                        a function, subroutine, method, property, and several others. It checks to make sure that the part of that system is working efficiently and expectedly.
+                    </p>
+                    <p>
+                        More information about testing can be found in the article about AAA Testing.
+                        <a class="nav-item nav-link" href="{{ url_for('simple_pages.show', page="page6")}}">Click Here</a>
+                    </p>
+                </li>
+                <li>
+                    <h3>Static</h3>
+                    <p>
+                        In programming, static is a modifier that can modify the scope and behavior of methods and properties/variables.
+                        If it is added to a method or property then that means that the variable or method belongs to the class rather than a specific instance.
+                    </p>
+                    <p>
+                        Examples of static methods and properties can be found in its respective definition.
+                    </p>
+                </li>
+                <li>
+                    <h3>Instance Method</h3>
+                    <p>
+                        An instance method is created when removing the static keyword from the method heading. It is a method that belongs to the instances or objects of a class but not the class itself.
+                        Therefore, it can refer to instance variables and methods that belong to its object and it can use static variables and methods.
+                    </p>
+                    <p>
+                        An example of an instance method can be shown through the calculator program:
+                        <br/>
+                        <br/>
+                        class Addition(Calculation):
+                        <br/>
+                        &nbsp; def get_result(self):
+                        <br/>
+                        &nbsp; &nbsp; sum_of_values = 0.0
+                        <br/>
+                        &nbsp; &nbsp; for value in self.values:
+                        <br/>
+                        &nbsp; &nbsp; &nbsp; sum_of_values = Add.add(value, sum_of_values)
+                        <br/>
+                        &nbsp; &nbsp; return sum_of_values
+                    </p>
+                </li>
+                <li>
+                    <h3>Instance Property</h3>
+                    <p>
+                        A instance property is a property that is defined within a class. Therefore, in each instance
+                        of the class the property can be accessed.
+                    </p>
+                    <p>
+                        An example of an instance property can be shown through the calculator program:
+                        <br/>
+                        <br/>
+                        class Calculations:
+                        <br/>
+                        &nbsp;&nbsp;history = []
+                    </p>
+                    <p>
+                        The instance property in the example above is the defined in the line of code "history = []".
+                    </p>
+                </li>
+                <li>
+                    <h3>Static Method</h3>
+                    <p>
+                        Static Methods are methods that can be called without having to create an instance or object of a class. Depending on the programming language
+                        this can be done by writing "static" in the method definition or in Python "@staticmethod" would have to be written.
+                    </p>
+                    <p>
+                        An example of a static method can be shown through the calculator program:
+                        <br/>
+                        <br/>
+                        @staticmethod
+                        <br/>
+                        def count_history():
+                        <br/>
+                        &nbsp;return len(Calculations.history)
+                    </p>
+                </li>
+                <li>
+                    <h3>Static Property</h3>
+                    <p>
+                        A static property is a property that can accessed globally in a program.
+                        Static properties can be defined by writing "static" when the property is being declared.
+                    </p>
+                    <p>
+                        For example, in Java in order to define a static property or variable you can use the following format:
+                        <br/>
+                        <br/>
+                        static int count = 0;
+                    </p>
+                    <p>
+                        By adding static to the properties declaration it allows for the property or variable to become a static property.
+                    </p>
+                </li>
+                <li>
+                    <h3>Encapsulation</h3>
+                    <p>
+                        In OOP, encapsulation is commonly used in the form of a class. Overall, it is the concept of bundling data
+                and methods within a single unit. It allows for specific or internal information to be hidden and
+                for the access to that information to be controlled. By using encapsulation users of classes don't know how the classes are
+                implemented or how the information is stored however they can access the logic of the classes through instantiation and class methods.
+                    </p>
+                    <p>
+                        An example of Encapsulation can be found here:
+                        <a class="nav-item nav-link" href="{{ url_for('simple_pages.show', page="page7")}}">Click Here</a>
+                    </p>
+                </li>
+                <li>
+                    <h3>Inheritance</h3>
+                    <p>
+                        Inheritance in object oriented programming allows for programmers to derive a class from another class which creates a hierarchy
+                        of classes. This allows for classes to share attributes and methods. Since a class can be derived from another class, the class
+                        that the class is being derived from is called a superclass or a parent class. While the derived class is called a subclass or child class.
+                    </p>
+                    <p>
+                        An example of Inheritance can be found here:
+                        <a class="nav-item nav-link" href="{{ url_for('simple_pages.show', page="page7")}}">Click Here</a>
+                    </p>
+                </li>
+                <li>
+                    <h3>Polymorphism</h3>
+                    <p>
+                        Polymorphism is the concept which allows for variables, functions, or objects to have multiple different forms.
+                    </p>
+                    <p>
+                        An example of Polymorphism can be found here:
+                        <a class="nav-item nav-link" href="{{ url_for('simple_pages.show', page="page7")}}">Click Here</a>
+                    </p>
+                </li>
+                <li>
+                    <h3>Abstraction</h3>
+                    <p>
+                        Abstraction in OOP is a concept that allows for only essential attributes to be shown and it hides the unnecessary information from users.
+                        Its assists with handling or reducing the complexity of programs, which helps users to implement more complex logic alongside the abstraction without having to
+                        deal with the complexity of the program. So it mainly shows the user how to implement the program but not the complexity of its implementation.
+                    </p>
+                    <p>
+                        An example of Abstraction can be found here:
+                        <a class="nav-item nav-link" href="{{ url_for('simple_pages.show', page="page7")}}">Click Here</a>
+                    </p>
+                </li>
+                <li>
+                    <h3>Overview of SOLID</h3>
+                    <p>
+                        SOLID is an acronym for five object oriented design principles that were made by Robert C. Martin.
+                        These principles allow for programmers to adopt a more organized programming style. They also assist in avoiding messy programs, the need for
+                        refactoring code, etc.
+                        The S stands for Single-Responsibility Principle. The O stands for Open-Closed Principle. The L stands for Liskov Substitution Principle.
+                        The I stands for Interface Segregation Principle. The D stands for Dependency Inversion Principle.
+                    </p>
+                    <p>
+                        Examples of SOLID and information about the topic can be found here:
+                        <a class="nav-item nav-link" href="{{ url_for('simple_pages.show', page="page8")}}">Click Here</a>
+                    </p>
+                </li>
+                <li>
+                    <h3>Overview of Design Patterns</h3>
+                    <p>
+                        Design patterns are programming strategies that can be used when solving a problem that is common in programming. It can be a series of steps or a way to designed
+                        or structure a section of code depending on its purpose.
+                    </p>
+                    <p>
+                        An example of an design pattern can be shown through the calculator program:
+                        <br/>
+                        <br/>
+                        @classmethod
+                        <br/>
+                        def create(cls, tuple_list: tuple):
+                        <br/>
+                         &nbsp; &nbsp;return cls(tuple_list)
+                    </p>
+                    <p>
+                        The code above is an example of the factory design pattern because it creates an object without exposing
+                        the logic to users.
+                    </p>
+                </li>
+            </ul>
+        </div>
     </div>
 {% endblock %}

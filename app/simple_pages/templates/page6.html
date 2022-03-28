@@ -4,5 +4,75 @@
         <div class="header">
             <h1>AAA Testing</h1>
         </div>
+    <div class="def">
+        <h4>
+            What is AAA Testing?
+        </h4>
+        <p>
+            AAA, in programming stands for arrange, act, and assert. Every part correlates to a
+            specific step that can be used when structuring tests. Arrange the data to prepare it for testing.
+            Act is for acting on the data through a method that performs an action. Assert is used
+            to get the result of a method and check to make sure that the data received from the result is what it is expected to be.
+        </p>
+        <h4>
+            Arrange -
+        </h4>
+        <p>
+           First, to implement the Arrange step, you can initialize objects, methods, dependencies, or data structures that may
+            be needed to efficiently creates tests for your program. An example is provided below:
+        </p>
+        <p>
+            def tuple_list():
+            <br/>
+            &nbsp; &nbsp;return 1.0, 2
+        </p>
+        <p>
+            This is an example of implementing the Arrange step using the calculator program.
+            This showcases the Arrange step because the method tuple_list is creating a group of test data that can be called upon
+            for testing if needed.
+        </p>
+        <h4>
+            Act -
+        </h4>
+        <p>
+            Second, to implement the Act step you would have to execute the test by called the functions or methods that were defined
+            in the Arrange step. An example is provided below:
+        </p>
+        <p>
+            def test_calculator_add_method():
+            <br/>
+            &nbsp; &nbsp;result = Calculator.add(tuple_list())
+        </p>
+        <p>
+            This is an example of implementing the Act step using the calculator program.
+            This showcases the Act step because since it is testing the add method, it is calling
+            the add method and using the test data from tuple_list() as a parameter.
+        </p>
+        <h4>
+            Assert -
+        </h4>
+        <p>
+            Lastly, to implement the Assert step you would have to create an assert statement which specifies the expected output the test should have. It also
+            checks to make sure that the output is equal to what is expected. An example is provided below:
+        </p>
+        <p>
+            assert result == 3
+        </p>
+        <p>
+            This is an example of implementing the Assert step using the calculator program.
+            This showcases the Assert step because the it testing to ensure that the result that the method is return
+            is what is expected. If it returns the correct output then the assert passes however, if the result of the method called
+            is not what is expected then the assert may fail.
+        </p>
+        <h4>
+            Why is Testing Important?
+        </h4>
+        <p>
+            Testing is important because it enhances the overall development process. To be specific, it can help the developer to identify the expected output
+            of their program which can assure them as they are programming that their changes are leading them closer to their desired output. It can also help developers identify
+            hidden errors in their code. Also, it can help developers to see if a recent change has caused for an unexpected error. Overall, it makes the development run more smoothly because it helps developers to
+            catch possible errors and it provides them with a guideline while programming.
+        </p>
+    </div>
     </div>
 {% endblock %}
