@@ -39,26 +39,12 @@
                         Definition: A class is commonly used in object oriented programming and it is a template that defines methods and variables for a specific object.
                     </p>
                     <p>
-                        For example, in Java, a class called Shape can be created using the following code:
+                        An example of an class can be shown through the calculator program:
                         <br/>
                         <br/>
-                        public class Shape {
-                            <br/>
-                            int num_sides;
-                            <br/>
-                            String name;
-                            <br/>
-                            ...
-                            <br/>
-                            public int get_sides() {
-                            <br/>
-                                return num_sides
-                            <br/>
-                            }
-                            <br/>
-                            ...
-                            <br/>
-                        }
+                        class Calculations:
+                        <br/>
+                        &nbsp;history = []
                     </p>
                 </li>
                 <li>
@@ -92,32 +78,14 @@
                         Definition: A constructor is a specific method of a class that is used to initialize a newly created object.
                     </p>
                     <p>
-                        For example, a constructor for the Shape class that we defined in the previous definitions would be:
+                        An example of a constructor can be shown using the calculator program:
                         <br/>
                         <br/>
-                        public class Shape {
-                            <br/>
-                            int num_sides;
-                            <br/>
-                            String name;
-                            <br/>
-                            public Shape(String name, int num_sides) {
-                            <br/>
-                            this.name = name;
-                            <br/>
-                            this.num_sides = num_sides;
-                            <br/>
-                            }
-                            <br/>
-                            public int get_sides() {
-                            <br/>
-                                return num_sides
-                            <br/>
-                            }
-                            <br/>
-                            ...
-                            <br/>
-                        }
+                        class Calculation:
+                        <br/>
+                        def __init__(self, tuple_list: tuple):
+                        <br/>
+                        &nbsp;self.values = Calculation.convert_args_to_tuple_of_float(tuple_list)
                     </p>
                 </li>
                 <li>
@@ -362,6 +330,15 @@
                     <p>
                         The code above is an example of the factory design pattern because it creates an object without exposing
                         the logic to users.
+                    </p>
+                </li>
+                <li>
+                    <h3>
+                        Pylint
+                    </h3>
+                    <p>
+                        Pylint is a tool that is used in Python that checks programs for errors, it also helps to enforce a standard coding standard and looks for code smells or any other underlying problems. Therefore,
+                        it is an bug and quality checker for Python programs.
                     </p>
                 </li>
             </ul>
