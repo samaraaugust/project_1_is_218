@@ -4,16 +4,36 @@
         <div class="header">
             <h1>SOLID</h1>
         </div>
+        <div>
+            <img src="{{ url_for('static', filename='images/solid.jpg') }}" class="d-block w-100" alt="picture of solid process">
+        </div>
         <div class="def">
-            <h3>
-                Single-responsibility Principle (SRP)
-            </h3>
+            <h2>
+                Overview
+            </h2>
             <p>
-                SRP states that "A class should have one and only one reason to change, meaning that a class should have only one job." (1)
-                <br/>
-                An example of SRP in the calculator program would be the following:
-                <br/>
-                <br/>
+                SOLID is an acronym for five object oriented design principles that were made by Robert C. Martin.
+                These principles allow for programmers to adopt a more organized programming style. They also assist in avoiding messy programs, the need for
+                refactoring code, etc.
+                The S stands for Single-Responsibility Principle. The O stands for Open-Closed Principle. The L stands for Liskov Substitution Principle.
+                The I stands for Interface Segregation Principle. The D stands for Dependency Inversion Principle.
+            </p>
+        </div>
+        <div class="def">
+            <p>
+                Single-responsibility Principle (SRP) states that "A class should have one and only one reason to change, meaning that a class should have only one job." (1)
+                Open-closed Principle (OCP) encourages programmers to write classes or entities of code in a certain way so that if new
+                functionality is need it the existing code does not need be modified. Therefore, it should be open for extension but closed for changes.
+                Liskov Substitution Principle promotes the concept that if the superclasses of a program were replaced with subclasses, the program wouldn't break or crash because
+                the subclasses behave in the same way that the superclasses does.
+                Interface Segregation Principle promotes the concept of ensuring that every part of a program is necessary therefore, declaring methods that are unnecessary
+                should not occur. In other words, a client should not encounter methods that aren't vital or unnecessary to the program.
+                Dependency Inversion Principle states that "High-level modules, which provide complex logic, should be easily reusable and unaffected by changes in low-level modules, which provide utility features." (2)
+                This can be achieved by using abstraction. The high level modules are parts of a program that is more complex and its more abstract. a low level module is a part
+                of a program that contain specific components and are less complex. The calculator program implements theses principles where for the Interface Segregation Principle
+                the calculator program follows this principle because each method contributes to the program. Also, an example of SRP is in the calculator program is shown in the following:
+            </p>
+            <p>
                 class Subtraction:
                 <br/>
                 &nbsp @staticmethod
@@ -29,38 +49,36 @@
         </div>
         <div class="def">
             <h3>
-                Open-closed Principle (OCP)
+                Design Patterns
             </h3>
             <p>
-                OCP states that "Objects or entities should be open for extension but closed for modification." (1)
-                In other words, this principle encourages programmers to write classes or entities of code in a certain way so that if new
-                functionality is need it the existing code does not need be modified.
+                Design patterns are programming strategies that can be used when solving a problem that is common in programming. It can be a series of steps or a way to designed
+                or structure a section of code depending on its purpose.
             </p>
+            <p>
+                An example of an design pattern can be shown through the calculator program:
+                <br/>
+                <br/>
+                @classmethod
+                <br/>
+                def create(cls, tuple_list: tuple):
+                <br/>
+                &nbsp; &nbsp;return cls(tuple_list)
+                </p>
+                <p>
+                    The code above is an example of the factory design pattern because it creates an object without exposing
+                    the logic to users.
+                </p>
         </div>
         <div class="def">
             <h3>
-                Liskov Substitution Principle
+                References
             </h3>
             <p>
-                This principle states "that a superclass object should be replaceable with a subclass object without breaking the functionality of the software." (2)
-
+                (1) Oloruntoba, S. (2021, November 30). Solid: The first 5 principles of object oriented design. DigitalOcean. Retrieved March 28, 2022, from https://www.digitalocean.com/community/conceptual_articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design
             </p>
-        </div>
-        <div class="def">
-            <h3>
-                Interface Segregation Principle
-            </h3>
             <p>
-                This principle states that "A client should never be forced to implement an interface that it doesn’t use, or clients shouldn’t be forced to depend on methods they do not use." (1)
-            </p>
-        </div>
-        <div class="def">
-            <h3>
-                Dependency Inversion Principle
-            </h3>
-            <p>
-                This principle states that "High-level modules, which provide complex logic, should be easily reusable and unaffected by changes in low-level modules, which provide utility features." (3)
-                This can be achieved by using abstraction.
+                (2) About Thorben JanssenThorben is an independent trainer and author of the Amazon bestselling book Hibernate Tips - More than 70 solutions to common Hibernate problems.He writes about Java EE related topics on his blog Thoughts on Java. (2020, April 28). Solid design principles explained: Dependency inversion principle with code examples. Stackify. Retrieved March 28, 2022, from https://stackify.com/dependency-inversion-principle/
             </p>
         </div>
     </div>
